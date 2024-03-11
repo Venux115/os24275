@@ -24,3 +24,15 @@ Concluído
 
 - [Delphi 7](https://www.embarcadero.com/br/products/delphi/starter)
 - [firebird](https://www.firebirdsql.org/)
+
+### Autor
+---
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/101436519?v=4" width="100px;" alt=""/>
+
+
+<h3>Vinícius de Araujo Goulart</h3>
+
+<h2>Feito com ❤️ por Vinícius Goular 👋🏽 Entre em contato!</h2>
+
+[LinkedIn](https://www.linkedin.com/in/goulart-vinicius)
+
