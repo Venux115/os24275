@@ -1,0 +1,67 @@
+object dmPrincipal: TdmPrincipal
+  OldCreateOrder = False
+  Left = 239
+  Top = 125
+  Height = 238
+  Width = 376
+  object conection: TIBCConnection
+    Database = 
+      'C:\Users\Desenv4.SEO\Desktop\trabalhos de pesquisa\os24275\BANCO' +
+      '.FDB'
+    ClientLibrary = 
+      'C:\Users\Desenv4.SEO\Desktop\trabalhos de pesquisa\os24275\fbcli' +
+      'ent.dll'
+    Port = '3050'
+    Username = 'SYSDBA'
+    Password = '19983101'
+    Server = 'localhost'
+    Connected = True
+    Left = 32
+    Top = 48
+  end
+  object qryVeiculo: TIBCQuery
+    SQLInsert.Strings = (
+      'INSERT INTO VEICULO'
+      '  (CD_VEICULO, DS_VEICULO, BL_IMAGEM)'
+      'VALUES'
+      '  (:CD_VEICULO, :DS_VEICULO, :BL_IMAGEM)')
+    SQLDelete.Strings = (
+      'DELETE FROM VEICULO'
+      'WHERE'
+      '  CD_VEICULO = :Old_CD_VEICULO')
+    SQLUpdate.Strings = (
+      'UPDATE VEICULO'
+      'SET'
+      
+        '  CD_VEICULO = :CD_VEICULO, DS_VEICULO = :DS_VEICULO, BL_IMAGEM ' +
+        '= :BL_IMAGEM'
+      'WHERE'
+      '  CD_VEICULO = :Old_CD_VEICULO')
+    SQLRefresh.Strings = (
+      'SELECT CD_VEICULO, DS_VEICULO, BL_IMAGEM FROM VEICULO'
+      'WHERE'
+      '  CD_VEICULO = :CD_VEICULO')
+    SQLLock.Strings = (
+      'SELECT NULL FROM VEICULO'
+      'WHERE'
+      'CD_VEICULO = :Old_CD_VEICULO'
+      'FOR UPDATE WITH LOCK')
+    Connection = conection
+    SQL.Strings = (
+      'SELECT * FROM VEICULO')
+    CachedUpdates = True
+    Left = 104
+    Top = 48
+    object qryVeiculoCD_VEICULO: TIntegerField
+      FieldName = 'CD_VEICULO'
+      Required = True
+    end
+    object qryVeiculoDS_VEICULO: TStringField
+      FieldName = 'DS_VEICULO'
+      Size = 240
+    end
+    object qryVeiculoBL_IMAGEM: TBlobField
+      FieldName = 'BL_IMAGEM'
+    end
+  end
+end

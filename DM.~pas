@@ -1,0 +1,30 @@
+unit DM;
+
+interface
+
+uses
+  SysUtils, Classes, DB, MemDS, DBAccess, IBC;
+
+type
+  TdmPrincipal = class(TDataModule)
+    conection: TIBCConnection;
+    qryVeiculo: TIBCQuery;
+    qryVeiculoCD_VEICULO: TIntegerField;
+    qryVeiculoDS_VEICULO: TStringField;
+    qryVeiculoBL_IMAGEM: TBlobField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  dmPrincipal: TdmPrincipal;
+
+implementation
+
+
+
+{$R *.dfm}
+
+end.
